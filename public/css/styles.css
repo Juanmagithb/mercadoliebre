@@ -30,6 +30,10 @@ header a {
     padding: 20px;;
 }
 
+section.banner img{
+    width: 100%;
+}
+
 div.top-header{
     display: flex;
     flex-wrap: wrap;
@@ -97,14 +101,17 @@ div.offers{
 }
 
 .discount{
-    width: 70%;
+   
+    font-size: 14px;
+    right: 20%;
 }
 
-.discount,
 .description{
     font-size: 16px;
     font-weight: normal;
 }
+
+
 
 h3,
 .description{

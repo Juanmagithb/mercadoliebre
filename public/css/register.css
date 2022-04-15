@@ -1,0 +1,107 @@
+.register{
+    background-color: #ebebeb;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem 0;
+    
+}
+
+.formreg{
+    width: 25%;
+    margin: 1rem 0;
+}
+
+.zone{
+    display: block;
+    margin-bottom: 2rem;
+    width: 100%;
+    background-color: #ffffff;
+    border-radius: 4px;
+    
+}
+
+.zone input{
+    width: 100%;
+    height: 100%;
+    padding: 0.75rem 0;
+    display: flex;
+    text-align: center;
+}
+
+.bithdate{
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+.bithdate label h2{
+    margin-bottom: 1rem;
+}
+
+.bithdate input{
+    background-color: #ffffff;
+    border-radius: 4px;
+}
+
+.profile{
+    margin-bottom: 2rem;
+}
+
+.profile label h2{
+    margin-bottom: 1rem;
+}
+
+.interests{
+    display: flex;
+    flex-direction: column;
+    
+}
+
+section .interests{
+    margin-bottom: 2rem;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+} 
+
+.interests div input{
+    display: inline;
+    margin: 1rem;
+}
+
+.user-img{
+    margin-bottom: 2rem;
+}
+
+.user-img input{
+    margin-top: 1rem; 
+}
+
+.button2{
+    display: flex;
+    justify-content: space-between;
+}
+
+.registerbutton, .erasebutton{
+    width: 45%;
+}
+
+.registerbutton button, .erasebutton button{
+    width: 100%;
+    padding: 0.75rem;
+    background-color: #03264C;
+    border-radius: 4px;
+    color: #ffffff;
+}
+
+.registerbutton:hover button, .erasebuttono:hover button{
+    background-color: #0022AA;
+    cursor: pointer;
+}   
+
+
+@media (min-width: 769px){
+
+    
+}
