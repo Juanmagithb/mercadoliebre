@@ -9,6 +9,12 @@ body{
     background-color: #ebebeb;
 }
 
+/* header */
+
+header{
+    background-color: #EAC926;
+}
+
 h3{
     font-size: 24px;
 }
@@ -17,52 +23,51 @@ p{
     font-size: 12px;
 }
 
+header a {
+    color:#000;
+    cursor:grab;
+    text-decoration:none;
+    padding: 20px;;
+}
+
 div.top-header{
     display: flex;
     flex-wrap: wrap;
+    justify-content: space-around;
     padding: 5%;
+    align-items: center;
+    /* width: 100%; */
+    
 }
 
-header div.top-header p{
-    width: 100%;
+
+header section p{
+    width: 30%;
     text-align: center;
     margin-top: 10px;
+    
 }
 
-header{
-    background-color: #EAC926;
-    height: 340px;
+nav{
+    display: none;
 }
 
-header div.logo,
-header .form{
-    width: 50%;
-}
 
-header div.logo{
+
+header section.logo{
     padding: 10px;
+    width: 40%;
 }
+
 header .form{
     display: flex;
-    align-items: center;
+    align-items:center;
     padding: 2px;
-    font-size: 11px;
-}
-/* header nav{
-    font-size: 12px;
-    margin-left: 20px;
-} */
-
-/* header ul li{
-    list-style-type: none;
+    
 }
 
-header ul li a{
-    text-decoration: none;
-    color: #000;
-} */
 
-header .form .input{
+header .input{
     background-color: #FFF;
     border: 1px solid #000;
     outline: none;
@@ -70,18 +75,15 @@ header .form .input{
     padding: 2px;
 }
 
-header .form .submit{
+header .submit{
     background-color: #FFF;
     border: 1px solid #000;
+    outline: none;
     color: #666;
-    width: 10%;
+    padding: 2px;
 }
 
-
-div.burger-menu i{
-    display: none;
-    
-}
+/* Products */
 
 div.last-visit,
 div.offers{
@@ -112,6 +114,11 @@ h3,
 .description{
     display: none;
     margin-top: 20px;
+}
+
+.item:hover .description{
+    display: block;
+    padding-top: 1rem;
 }
 
 section.banner img{
@@ -149,6 +156,14 @@ main section article i{
     position: absolute;
     right: 20px;
     top: -15px;
+    transition:
+    ease-out transform 0.5s,
+    ease-out right 0.5s;
+}
+
+.item:hover i{
+    transform: rotateZ(360deg);
+    right: 20%;
 }
 
 main section h3{
@@ -165,72 +180,84 @@ article div.main-article{
     padding: 15px;
 }
 
+
+
+
+
+
+/* burger-menu */
+
+
+div.burger-menu{
+    padding-bottom: 1rem;
+    color: white;
+    width: 100%;
+
+    margin: auto;
+    display: flex;
+    justify-content: center;
+}
+
+
+div.burger-menu i{
+
+    padding: 0.5rem;
+    border-radius: 15%;
+    background-color: #0022AA;
+
+}
+
+
+/* footer */
+
+footer{
+    background-color: white;
+}
+
 footer h4{
-    font-size: 12px; 
+    font-size: 16px; 
 }
-
-footer section.sec{
-    display: flex;
-    flex-direction:row;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    align-items:flex-start;
-    text-align: center;
-}
-
-header section.sec2{
-    display: flex;
-    justify-content: space-between;
-    align-items:center;
-}
-
-header article section div.sec3{
-    
-    display: flex;
-    justify-content: space-between;
-    align-items:center;
-
-}
-
-
-
-header a {
-    color:#000;
-    cursor: none;
-    text-decoration:none
-}
-
-
-
 
 footer h5{
+
     text-align: center;
     font-size: 12px;
-    margin-top: 15px;
+    text-decoration: none;
+    padding: 1rem 1rem;
+    
 }
 
-/* footer p{
-    max-width: 60%;
-} */
+.sec{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
 
+footer div section.fs {
+    padding: 2rem 3rem;
+    text-align: center;
+    max-width: 30rem;
+}
 
-footer section i{
-    color: #0044AA;
-    font-size: 20px;
+footer div section i{
+    color: #03264C;
+    font-size: 30px;
     height: 40px;
     margin: 10px 0px 20px 0px;
     padding: 10px;
 }
 
+footer div section i:hover{
+    color: #0022AA;
+}
+
+/* MEDIA QUERY TABLET */
 
 @media (min-width: 361px){
-    main section article .description{
-        display: block;
-    }
 
-    main section article{
+    /* main section article{
         box-shadow: 0px 0px 10px rgb(100, 100, 100);
-    }
+    } */
 
     main section div.products{
         display: flex;
@@ -249,31 +276,59 @@ footer section i{
         width: 50%;
     }
 
+    .logo{
+        width: 30%;
+    }
 
+    .item:hover{
+        box-shadow : 0px 0px 10px rgb(100 , 100 , 100);
+    }
 
 
 }
+
+/* Media Queries DESKTOP */
 
 @media (min-width: 769px){
     main section div.products article{
         width: 22%;
     }
+
+    .sec{
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+
+    nav{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        padding-bottom: 1.5rem;
+        
+    } 
+    
+    
+    .sec2
+    .sec3{
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    text-align: center;
+    flex-direction:block;
+    
+    
+    } 
+
+    .imput
+    .submit{
+        width: 30%;
+    }
+
+
+    div.burger-menu{
+        display: none;
+    }
+
 }
 
-@media (max-width: 769px){
-    div.burger-menu i{
-    background-color: #0044AA;
-    border-radius: 5px;
-    color: #FFF;
-    font-size: 20px;
-    height: 40px;
-    /* margin: 10px 0px 20px 0px; */
-    padding: 10px;
-    width: 40px;
-    display:flex;
-}
-
-header section.sec2{
-    display: none;
-}
-}
